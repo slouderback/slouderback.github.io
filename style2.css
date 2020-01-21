@@ -1,0 +1,54 @@
+body {
+  background: url(resources/backgroundOption6.webp) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  /* background-color: #363639; */
+}
+
+#name{
+  font-family: "Lato";
+  font-size: 3vw;
+  margin: auto;
+  text-align: center;
+}
+
+/* Nav bar */
+
+.flexbox-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* color: red; */
+}
+a {
+  padding: 1vw;
+  font-size: 250%;
+  font-family: "Lato";
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+
+}
+
+a:hover {
+  color: grey;
+}
+
+/* End nav bar */
+
+#container{
+  /* position: absolute;
+  width: 50%;
+  height: 60%;
+  top: 40%;
+  border-style: solid; */
+  margin: auto;
+  border: solid 2px black;
+  height:200px;
+  width: 300px;
+}
