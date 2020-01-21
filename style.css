@@ -25,7 +25,7 @@ body {
   justify-content: center;
   /* color: red; */
 }
-a {
+.flexbox-container > a {
   padding: 1vw;
   font-size: 250%;
   font-family: "Lato";
@@ -45,10 +45,32 @@ a:hover {
   /* position: absolute;
   width: 50%;
   height: 60%;
-  top: 40%;
-  border-style: solid; */
+  top: 40%; */
+  /* border-style: solid; */
   margin: auto;
-  border: solid 2px black;
-  height:200px;
-  width: 300px;
+  /* border: solid 2px black; */
+  height:100%;
+  width: 40%;
+  font-family: "Poppins";
+  /* background: rgba(220, 220, 220, .1); */
+  /* opacity: 50%; */
+}
+#projects{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+#projects > a{
+  /* margin: auto; */
+  font-family: "Poppins";
+  text-decoration: none;
+  color: black;
+  padding:.75vw;
+  padding-left: 1.5vw;
+  padding-right: 1.5vw;
+  background-color: rgba(220, 220, 220, .5);
+  /* justify-content: space-evenly; */
+}
+#projects > a:hover{
+  background-color: rgba(220, 220, 220, .9);
 }
