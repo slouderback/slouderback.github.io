@@ -1,5 +1,5 @@
 body {
-  background: url(resources/backgroundOption6.webp) no-repeat center center fixed;
+  background: url(resources/extendedBackground.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -41,35 +41,39 @@ a:hover {
 /* End nav bar */
 
 #container{
-  /* position: absolute;
-  width: 50%;
-  height: 60%;
-  top: 40%; */
   /* border-style: solid; */
   margin: auto;
-  /* border: solid 2px black; */
   height:100%;
   width: 40%;
   font-family: "Poppins";
-  /* background: rgba(220, 220, 220, .1); */
+  /* background-color: rgba(220, 220, 220, .2); */
   /* opacity: 50%; */
 }
-#projects{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-#projects > a{
-  /* margin: auto; */
-  font-family: "Poppins";
-  text-decoration: none;
+
+#greeting{
   color: black;
-  padding:.75vw;
-  padding-left: 1.5vw;
-  padding-right: 1.5vw;
-  background-color: rgba(220, 220, 220, .5);
-  /* justify-content: space-evenly; */
+  font-family: "Lato";
+  font-weight: 600;
+  position: relative;
+  left:5%;
+  top:5%;
+  /* border: solid 2px black; */
+  width:13%;
 }
-#projects > a:hover{
-  background-color: rgba(220, 220, 220, .9);
+
+#paragraphOne{
+  position: relative;
+  width: 50%;
+  left: 5%;
+  top: 2%;
+}
+
+#profilePicture{
+  position: relative;
+  left:60%;
+  top:-13%;
+  width:30%;
+  height:auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 0.39);
+  /* border: solid 2px black; */
 }

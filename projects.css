@@ -1,5 +1,5 @@
 body {
-  background: url(resources/backgroundOption6.webp) no-repeat center center fixed;
+  background: url(resources/extendedBackground.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -40,22 +40,22 @@ a:hover {
 
 /* End nav bar */
 
-#containerProject1{
+#container{
   /* border-style: solid; */
   margin: auto;
   height:100%;
   width: 40%;
   font-family: "Poppins";
-  /* background: rgba(220, 220, 220, .1); */
+  /* background-color: rgba(220, 220, 220, .2); */
   /* opacity: 50%; */
 }
-#containerProject1 > a {
+#container > a {
   text-decoration: none;
   color: black;
   font-family: "Lato";
   font-weight: 600;
 }
-#containerProject1 > a > h2 {
+#container > a > h2 {
   position: relative;
   left:5%;
   top:5%;
@@ -76,4 +76,16 @@ a:hover {
   height:auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 0.39);
   /* border: solid 2px black; */
+}
+#unoGameTitle{
+  /* border: solid 2px black; */
+  width:20%;
+}
+#unoGameImg{
+  position: relative;
+  left:60%;
+  top:-8%;
+  width:30%;
+  height:auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.39);
 }
