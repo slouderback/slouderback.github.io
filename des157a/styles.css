@@ -20,74 +20,63 @@
   overflow: hidden;
 }
 
-/* .hexagonContainer {
-    margin-top: 20px;
-    margin-left: -16px;
-    width: 0.75em;
-    height: 0.87em;
-    color: rgb(54, 54, 75);
-    background-color: red;
+svg {
+  fill: black;
 }
 
-.hexagon {
-    position: relative;
-    left: -0.079em;
-    top: -0.2em;
-} */
-
-.hexagon2Top {
-  width: 0;
-  border-bottom: 30px solid rgb(54, 54, 75);
-  border-left: 52px solid transparent;
-  border-right: 52px solid transparent;
-}
-
-.hexagon2Mid {
-  width: 104px;
-  height: 60px;
-  background-color: rgb(54, 54, 75);
-}
-
-.hexagon2Bot {
-  width: 0;
-  border-top: 30px solid rgb(54, 54, 75);
-  border-left: 52px solid transparent;
-  border-right: 52px solid transparent;
-}
-
-.hexagon2:hover {
+svg:hover {
+  fill: green;
 }
 
 #firstRow {
   display: flex;
-  flex-direction: row;
-  gap: 20px;
-  font-size: 103.6px;
-  margin-left: 10px;
+  gap: 1px;
+  width: 200%;
+  margin-top: -15px;
+  /* background-color: blue; */
 }
 
 #secondRow {
   display: flex;
-  flex-direction: row;
-  font-size: 103.6px;
-  margin-top: -11px;
-  margin-left: -30px;
+  gap: 1px;
+  width: 200%;
+  margin-top: -16px;
+  margin-left: -29px;
+  /* background-color: purple; */
 }
 
 #thirdRow {
   display: flex;
-  flex-direction: row;
-  font-size: 103.6px;
-  margin-top: -11px;
-  margin-left: 9px;
+  gap: 1px;
+  width: 200%;
+  margin-top: -15px;
+  /* background-color: blue; */
 }
 
 #fourthRow {
   display: flex;
-  flex-direction: row;
-  font-size: 103.6px;
-  margin-top: -11px;
-  margin-left: -30px;
+  gap: 1px;
+  width: 200%;
+  margin-top: -14px;
+  margin-left: -29px;
+  /* background-color: purple; */
+}
+
+#fifthRow {
+  display: flex;
+  gap: 1px;
+  width: 200%;
+  margin-top: -15px;
+  /* background-color: blue; */
+}
+
+#sixthRow {
+  display: flex;
+  gap: 1px;
+  width: 200%;
+  margin-top: -14px;
+  margin-left: -29px;
+  /* background-color: purple; */
 }
 
 ul,
