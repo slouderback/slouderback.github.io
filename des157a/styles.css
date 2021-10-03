@@ -6,6 +6,21 @@
   max-height: 768px;
   margin: auto;
   border: 1px solid red;
+  background-color: #3e7cb1;
+  color: #bdc6cf;
+  animation: backgroundColorLoop 3s infinite;
+}
+
+@keyframes backgroundColorLoop {
+  0% {
+    background-color: #3e7cb1;
+  }
+  50% {
+    background-color: #5d92c0;
+  }
+  100% {
+    background-color: #3e7cb1;
+  }
 }
 
 .headerText {
@@ -21,11 +36,38 @@
 }
 
 svg {
-  fill: black;
+  fill: #054a91;
 }
 
 svg:hover {
+  animation: colorShift 2s infinite;
   fill: green;
+}
+
+@keyframes colorShift {
+  0% {
+    fill: #054a91;
+    transform: scale(1);
+    opacity: 1;
+  }
+  25% {
+    fill: red;
+    transform: scale(1.2);
+  }
+  50% {
+    fill: rgb(0, 0, 151);
+    transform: scale(1.4);
+    opacity: 0.8;
+  }
+  75% {
+    fill: green;
+    transform: scale(1.2);
+  }
+  100% {
+    fill: #054a91;
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 #firstRow {
@@ -59,7 +101,6 @@ svg:hover {
   width: 200%;
   margin-top: -14px;
   margin-left: -29px;
-  /* background-color: purple; */
 }
 
 #fifthRow {
@@ -67,7 +108,6 @@ svg:hover {
   gap: 1px;
   width: 200%;
   margin-top: -15px;
-  /* background-color: blue; */
 }
 
 #sixthRow {
@@ -76,7 +116,6 @@ svg:hover {
   width: 200%;
   margin-top: -14px;
   margin-left: -29px;
-  /* background-color: purple; */
 }
 
 ul,
@@ -86,7 +125,8 @@ li {
 }
 
 li > a {
-  text-decoration: none;
+  /* text-decoration: none; */
+  color: #bdc6cf;
 }
 
 main {
@@ -103,14 +143,29 @@ footer {
   margin: 20px 20% 0 20%;
 }
 
+footer a {
+  color: #bdc6cf;
+}
+
 section {
   width: 27%;
   padding: 10px;
-  background-color: gray;
+  background-color: #054a91;
   border: 1px solid rgb(41, 41, 41);
   border-radius: 5%;
+  transition: all 0.2s ease-in-out;
 }
 
 section:hover {
   transform: scale(1.08);
+}
+
+@keyframes sectionAnimation {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.2);
+  }
 }
