@@ -1,3 +1,14 @@
+:root {
+  --bg-color-one: #202c39;
+  --bg-color-two: #283845;
+  --banner-bg: black;
+  --text-color: #b8b08d;
+  --text-color-off: #f8f8ff;
+  --hex-color: #283845;
+  --section-color: #1e272e;
+  --section-hover-color: #4b413a;
+}
+
 #container {
   width: 100%;
   max-width: 1366px;
@@ -6,47 +17,62 @@
   max-height: 768px;
   margin: auto;
   border: 1px solid red;
-  background-color: #3e7cb1;
-  color: #bdc6cf;
+  background-color: var(--bg-color-one);
+  color: var(--text-color);
   animation: backgroundColorLoop 3s infinite;
 }
 
 @keyframes backgroundColorLoop {
   0% {
-    background-color: #3e7cb1;
+    background-color: var(--bg-color-one);
   }
   50% {
-    background-color: #5d92c0;
+    background-color: var(--bg-color-one);
   }
   100% {
-    background-color: #3e7cb1;
+    background-color: var(--bg-color-one);
+  }
+}
+
+@keyframes float {
+  0% {
+    text-shadow: 15px 5px 10px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    text-shadow: 15px 10px 10px rgba(0, 0, 0, 0.4);
+    transform: translatey(-5px);
+  }
+  100% {
+    text-shadow: 15px 5px 10px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
   }
 }
 
 .headerText {
   margin-left: 133px;
+  animation: float 4s ease-in-out infinite;
 }
 
 #banner {
   width: 1100px;
   height: 250px;
-  background-color: grey;
+  background-color: var(--banner-bg);
   margin: 0 auto;
   overflow: hidden;
 }
 
 svg {
-  fill: #054a91;
+  fill: var(--hex-color);
 }
 
 svg:hover {
   animation: colorShift 2s infinite;
-  fill: green;
 }
 
 @keyframes colorShift {
   0% {
-    fill: #054a91;
+    fill: var(--hex-color);
     transform: scale(1);
     opacity: 1;
   }
@@ -64,7 +90,7 @@ svg:hover {
     transform: scale(1.2);
   }
   100% {
-    fill: #054a91;
+    fill: var(--hex-color);
     transform: scale(1);
     opacity: 1;
   }
@@ -75,16 +101,14 @@ svg:hover {
   gap: 1px;
   width: 200%;
   margin-top: -15px;
-  /* background-color: blue; */
 }
 
 #secondRow {
   display: flex;
   gap: 1px;
   width: 200%;
-  margin-top: -16px;
+  margin-top: -15px;
   margin-left: -29px;
-  /* background-color: purple; */
 }
 
 #thirdRow {
@@ -92,7 +116,6 @@ svg:hover {
   gap: 1px;
   width: 200%;
   margin-top: -15px;
-  /* background-color: blue; */
 }
 
 #fourthRow {
@@ -114,7 +137,7 @@ svg:hover {
   display: flex;
   gap: 1px;
   width: 200%;
-  margin-top: -14px;
+  margin-top: -15px;
   margin-left: -29px;
 }
 
@@ -126,7 +149,7 @@ li {
 
 li > a {
   /* text-decoration: none; */
-  color: #bdc6cf;
+  color: var(--text-color);
 }
 
 main {
@@ -137,6 +160,33 @@ main {
   margin: 1em auto;
 }
 
+/* @keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+} */
+
+/* .sectionContent {
+  opacity: 0;
+}
+
+.sectionTitle {
+  position: absolute;
+}
+
+#studioSection:hover .sectionContent {
+  display: block;
+  animation: fadeIn 1s forwards;
+}
+
+#studioSection:hover .sectionTitle {
+  display: none;
+  opacity: 0;
+} */
+
 footer {
   display: flex;
   justify-content: space-between;
@@ -144,28 +194,26 @@ footer {
 }
 
 footer a {
-  color: #bdc6cf;
+  color: var(--text-color);
 }
 
 section {
+  position: relative;
+  top: 0px;
   width: 27%;
   padding: 10px;
-  background-color: #054a91;
-  border: 1px solid rgb(41, 41, 41);
+  background-color: var(--section-color);
+  border: 1px solid white;
   border-radius: 5%;
   transition: all 0.2s ease-in-out;
 }
 
 section:hover {
-  transform: scale(1.08);
+  background-color: var(--section-hover-color);
+  box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.6);
+  color: var(--text-color-off);
+  top: -4px;
 }
-
-@keyframes sectionAnimation {
-  from {
-    transform: scale(1);
-  }
-
-  to {
-    transform: scale(1.2);
-  }
+section:hover ul li a {
+  color: var(--text-color-off);
 }
