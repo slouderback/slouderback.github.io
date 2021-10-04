@@ -5,6 +5,9 @@
   --text-color: #b8b08d;
   --text-color-off: #f8f8ff;
   --hex-color: #283845;
+  --hex-color-phase-1: #34495a;
+  --hex-color-phase-2: #415c72;
+  --hex-color-phase-3: #34495a;
   --section-color: #1e272e;
   --section-hover-color: #4b413a;
 }
@@ -77,16 +80,16 @@ svg:hover {
     opacity: 1;
   }
   25% {
-    fill: red;
+    fill: var(--hex-color-phase-1);
     transform: scale(1.2);
   }
   50% {
-    fill: rgb(0, 0, 151);
+    fill: var(--hex-color-phase-2);
     transform: scale(1.4);
     opacity: 0.8;
   }
   75% {
-    fill: green;
+    fill: var(--hex-color-phase-3);
     transform: scale(1.2);
   }
   100% {
@@ -160,33 +163,6 @@ main {
   margin: 1em auto;
 }
 
-/* @keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-} */
-
-/* .sectionContent {
-  opacity: 0;
-}
-
-.sectionTitle {
-  position: absolute;
-}
-
-#studioSection:hover .sectionContent {
-  display: block;
-  animation: fadeIn 1s forwards;
-}
-
-#studioSection:hover .sectionTitle {
-  display: none;
-  opacity: 0;
-} */
-
 footer {
   display: flex;
   justify-content: space-between;
@@ -201,11 +177,24 @@ section {
   position: relative;
   top: 0px;
   width: 27%;
-  padding: 10px;
+  padding: 10px 10px 0px 15px;
   background-color: var(--section-color);
   border: 1px solid white;
   border-radius: 5%;
   transition: all 0.2s ease-in-out;
+}
+
+section h2 {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+section ul {
+  margin-top: 5px;
+}
+
+section ul li a {
+  line-height: 24px;
 }
 
 section:hover {
