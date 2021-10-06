@@ -8,20 +8,25 @@
   </head>
   <body>
     <h1>Experiment 1</h1>
-    <h2>Open the console to see the output of the code</h2>
+    <h2>Fizz Buzz!</h2>
+
+    <div id="fizzBuzz"></div>
 
     <script>
+      var answerDiv = document.getElementById("fizzBuzz");
+      var answerText = "";
       for (var i = 1; i <= 100; i++) {
         if (i % 3 == 0 && i % 5 == 0) {
-          console.log("Fizz Buzz");
+          answerText += `${i}: Fizz Buzz <br>`;
         } else if (i % 3 == 0) {
-          console.log("Fizz");
+          answerText += `${i}: Fizz <br>`;
         } else if (i % 5 == 0) {
-          console.log("Buzz");
+          answerText += `${i}: Buzz <br>`;
         } else {
-          console.log(i);
+          answerText += `${i}: ${i} <br>`;
         }
       }
+      answerDiv.innerHTML = answerText;
     </script>
   </body>
 </html>
