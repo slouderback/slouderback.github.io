@@ -60,14 +60,16 @@
         .getElementById("valSubmit")
         .addEventListener("click", function () {
           var computerGuess = randomInt(1, 5);
-          computerText[3].className = "fadeIn";
-          computerText[3].innerHTML = `I was thinking about ${computerGuess}!`;
 
           computerText[4].className = "fadeIn";
           if (userInputs[2].value == computerGuess) {
+            computerText[3].className = "fadeIn";
+            computerText[3].innerHTML = `I was thinking about ${computerGuess}!`;
             computerText[4].innerHTML = `You got it right!`;
           } else {
-            computerText[4].innerHTML = `Aw darn! Better luck next time!`;
+            computerText[3].className = "invisible";
+            computerText[4].className = "fadeIn";
+            computerText[4].innerHTML = `Aw darn! Try again!`;
           }
         });
     </script>
