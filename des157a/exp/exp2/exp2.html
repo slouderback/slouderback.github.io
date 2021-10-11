@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exp 2</title>
+    <link rel="stylesheet" href="exp2.css" />
+  </head>
+  <body>
+    <h3>Hey there! Whats your name?</h3>
+    <div>
+      <input type="text" />
+      <input type="submit" id="nameSubmit" value="Submit" />
+    </div>
+    <h3></h3>
+    <h3></h3>
+    <div class="invisible">
+      <input type="text" />
+      <input type="submit" id="valSubmit" value="Submit" />
+    </div>
+    <h3></h3>
+    <h3></h3>
+    <script>
+      // This script allows the user to play a guessing game where the computer
+      // picks a random value from 1 to 5 and then the user guesses what it is.
+      // If they get it right it shows a success message and if they get it wrong
+      // it shows a failure message.
+      var computerText = document.querySelectorAll("h3");
+      var inputSections = document.querySelectorAll("div");
+      var userInputs = document.querySelectorAll("input");
+
+      var potentialBackgrounds = [
+        "#BCF4F5",
+        "#B4EBCA",
+        "#D9F2B4",
+        "#D3FAC7",
+        "#FFB7C3",
+      ];
+
+      function randomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+      }
+
+      document.body.style.backgroundColor =
+        potentialBackgrounds[randomInt(0, 4)];
+
+      document
+        .getElementById("nameSubmit")
+        .addEventListener("click", function () {
+          computerText[1].className = "fadeIn";
+          computerText[1].innerHTML = `Hey there ${userInputs[0].value}!`;
+
+          computerText[2].className = "fadeIn";
+          computerText[2].innerHTML = `Im thinking of a number between 1 and 5. What is it?`;
+          inputSections[1].className = "fadeIn";
+        });
+
+      document
+        .getElementById("valSubmit")
+        .addEventListener("click", function () {
+          var computerGuess = randomInt(1, 5);
+          computerText[3].className = "fadeIn";
+          computerText[3].innerHTML = `I was thinking about ${computerGuess}!`;
+
+          computerText[4].className = "fadeIn";
+          if (userInputs[2].value == computerGuess) {
+            computerText[4].innerHTML = `You got it right!`;
+          } else {
+            computerText[4].innerHTML = `Aw darn! Better luck next time!`;
+          }
+        });
+    </script>
+  </body>
+</html>
