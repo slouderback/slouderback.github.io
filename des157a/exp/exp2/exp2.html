@@ -42,6 +42,10 @@
         return Math.floor(Math.random() * (max - min + 1) + min);
       }
 
+      function getComputerGuess() {
+        return randomInt(1, 5);
+      }
+
       document.body.style.backgroundColor =
         potentialBackgrounds[randomInt(0, 4)];
 
@@ -59,7 +63,7 @@
       document
         .getElementById("valSubmit")
         .addEventListener("click", function () {
-          var computerGuess = randomInt(1, 5);
+          var computerGuess = getComputerGuess();
 
           computerText[4].className = "fadeIn";
           if (userInputs[2].value == computerGuess) {
