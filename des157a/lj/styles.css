@@ -1,0 +1,72 @@
+:root {
+  --bg-color-one: #202c39;
+  --bg-color-two: #283845;
+  --banner-bg: black;
+  --text-color: #b8b08d;
+  --text-color-off: #f8f8ff;
+  --hex-color: #283845;
+  --hex-color-phase-1: #34495a;
+  --hex-color-phase-2: #415c72;
+  --hex-color-phase-3: #34495a;
+  --section-color: #1e272e;
+  --section-hover-color: #4b413a;
+}
+
+#container {
+  width: 100%;
+  max-width: 1366px;
+  min-width: 900px;
+  height: 100%;
+  margin: auto;
+  padding-top: 5px;
+  background-color: var(--bg-color-one);
+  color: var(--text-color);
+  animation: backgroundColorLoop 3s infinite;
+}
+
+@keyframes backgroundColorLoop {
+  0% {
+    background-color: var(--bg-color-one);
+  }
+  50% {
+    background-color: var(--bg-color-one);
+  }
+  100% {
+    background-color: var(--bg-color-one);
+  }
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+h3 {
+  margin-bottom: -10px;
+}
+
+p {
+  max-width: 300px;
+  font-size: 18px;
+  line-height: 1.28;
+}
+
+p a {
+  color: var(--text-color);
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 20% 0 20%;
+}
+
+footer a {
+  color: var(--text-color);
+}
