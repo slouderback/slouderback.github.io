@@ -1,34 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Build Mad Lib Script</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
-    <header>
-      <h1>Build a Mad Lib Script</h1>
+    <div id="container">
+      <header>
+        <p id="mainText">Mad Libs 2.0</p>
+        <p id="subText">Apple edition</p>
+      </header>
       <main>
-        <form id="myForm">
-          <label for="noun1">Provide a Noun</label>
-          <input type="text" id="noun1" required />
-
-          <label for="noun2">Provide another Noun</label>
-          <input type="text" id="noun2" required />
-
-          <label for="adj">Provide an Adjective</label>
-          <input type="text" id="adj" required />
-
-          <label for="verb">Provide a Verb</label>
-          <input type="text" id="verb" required />
-
-          <input type="submit" value="Send" />
-        </form>
-        <article id="madlib"></article>
+        <div>
+          <!-- <div id="pencilText">Pencil</div> -->
+          <svg
+            width="169"
+            height="277"
+            viewBox="0 0 169 277"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M123.138 34.1569L130.454 21.4082C130.454 21.4082 140.954 5.01723 142.842 1.72721C144.73 -1.56281 170.555 11.5463 167.959 16.07C165.363 20.5938 157.218 36.6915 157.218 36.6915L149.902 49.4403L35.9125 248.074L7.953 270.609L0.820534 276.358L2.62362 267.566L10.0927 231.146L123.138 34.1569Z"
+              fill="#C6C6C6"
+              fill-opacity="0.89"
+            />
+            <path
+              d="M10.0927 231.146C13.196 243.838 21.2502 249.119 35.9125 248.074M10.0927 231.146L123.138 34.1569M10.0927 231.146C7.11731 245.654 5.21604 254.925 2.62362 267.566M130.454 21.4082L157.218 36.6915M130.454 21.4082L123.138 34.1569M130.454 21.4082C130.454 21.4082 140.954 5.01723 142.842 1.72721C144.73 -1.56281 170.555 11.5463 167.959 16.07C165.363 20.5938 157.218 36.6915 157.218 36.6915M157.218 36.6915L149.902 49.4403M35.9125 248.074L149.902 49.4403M35.9125 248.074C24.7699 257.055 17.6076 262.828 7.95301 270.609M123.138 34.1569L149.902 49.4403M7.95301 270.609C5.73346 272.398 3.38218 274.293 0.820534 276.358C1.46612 273.21 2.06114 270.308 2.62362 267.566M7.95301 270.609C4.79936 270.98 3.6659 270.265 2.62362 267.566"
+              stroke="black"
+              stroke-width="0.5"
+            />
+          </svg>
+        </div>
+        <div id="contentContainer">
+          <form class="myForm">
+            <div id="inputs">
+              <div>
+                <div>
+                  <label for="noun1">Name of product</label>
+                  <input type="text" id="productName" required />
+                </div>
+                <div>
+                  <label for="noun2">Adjective 1</label>
+                  <input type="text" id="adj1" required />
+                </div>
+                <div>
+                  <label for="adj">Verb 1</label>
+                  <input type="text" id="verb1" required />
+                </div>
+              </div>
+              <div>
+                <div>
+                  <label for="verb">Length of time</label>
+                  <input type="text" id="time" required />
+                </div>
+                <div>
+                  <label for="verb">Adjective 2</label>
+                  <input type="text" id="adj2" required />
+                </div>
+                <div>
+                  <label for="verb">Verb 2</label>
+                  <input type="text" id="verb2" required />
+                </div>
+              </div>
+            </div>
+            <input type="submit" value="Send" />
+          </form>
+          <div id="story" class="hidden">
+            <div id="madlib"></div>
+            <button id="retryButton">Retry</button>
+          </div>
+        </div>
       </main>
-      <footer></footer>
-    </header>
+      <footer>
+        <a
+          href="mailto:&#115;&#106;&#108;&#111;&#117;&#100;&#101;&#114;&#098;&#097;&#099;&#107;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;"
+          >Email Me</a
+        >
+        <a
+          href="https://validator.w3.org/check?uri=https://slouderback.github.io/des157a/"
+          >Valid HTML 5</a
+        >
+        <a href="https://jigsaw.w3.org/css-validator/check/referer"
+          >Valid CSS</a
+        >
+      </footer>
+    </div>
   </body>
 </html>
