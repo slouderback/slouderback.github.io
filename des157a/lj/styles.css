@@ -55,7 +55,7 @@ article {
 }
 
 h3 {
-  margin-top: 5px;
+  margin-top: 15px;
   margin-bottom: -5px;
 }
 
@@ -71,7 +71,17 @@ h2 {
   color: var(--text-color);
 }
 
+img {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.imageText {
+  margin-top: 55px;
+}
+
 p {
+  margin-bottom: -5px;
   max-width: 350px;
 }
 
