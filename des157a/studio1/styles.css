@@ -62,8 +62,8 @@ svg {
   justify-content: center;
   align-items: center;
   padding: 10px 30px 10px 30px;
-  border: 1px solid black;
-  box-shadow: 0 0 30px black;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   width: 500px;
   height: 300px;
 }
@@ -94,7 +94,8 @@ input[type="text"] {
 }
 
 input[type="submit"] {
-  padding: 10px 30px 10px 30px;
+  width: 120px;
+  height: 40px;
   margin: 10px auto 0 auto;
   background: rgba(0, 0, 0, 0.41);
   color: white;
@@ -111,7 +112,8 @@ input[type="submit"] {
 }
 
 #retryButton {
-  padding: 10px 30px 10px 30px;
+  width: 120px;
+  height: 40px;
   margin: 10px auto 0px auto;
   background: rgba(0, 0, 0, 0.41);
   color: white;
