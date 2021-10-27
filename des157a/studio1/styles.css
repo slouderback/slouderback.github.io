@@ -58,9 +58,14 @@ svg {
 }
 
 #contentContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 10px 30px 10px 30px;
   border: 1px solid black;
   box-shadow: 0 0 30px black;
+  width: 500px;
+  height: 300px;
 }
 
 .myForm {
@@ -99,14 +104,15 @@ input[type="submit"] {
 }
 
 #story {
-  font-size: 24px;
+  font-size: 18px;
+  line-height: 1.5rem;
   padding: 10px;
-  max-width: 500px;
+  max-width: 400px;
 }
 
 #retryButton {
   padding: 10px 30px 10px 30px;
-  margin: 10px auto 0 auto;
+  margin: 10px auto 0px auto;
   background: rgba(0, 0, 0, 0.41);
   color: white;
   border: none;
@@ -126,9 +132,7 @@ footer a {
 }
 
 .hidden {
-  background-color: red;
   display: none;
-  /* opacity: 0; */
 }
 
 .visible {
