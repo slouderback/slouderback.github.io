@@ -2,6 +2,7 @@
   --bg-color-one: #202c39;
   --bg-color-two: #1b2631;
   --text-color: #ffffff;
+  overflow-x: hidden;
 }
 
 #container {
