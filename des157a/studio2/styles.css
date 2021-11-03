@@ -42,7 +42,7 @@ main {
   align-items: center;
   gap: 10px;
   position: absolute;
-  top: 55%;
+  top: 400px;
   left: 50%;
   width: 800px;
   background-color: var(--bg-color-two);

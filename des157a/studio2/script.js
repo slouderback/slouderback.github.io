@@ -69,7 +69,7 @@
       currentImage = imageDivs.length - 1;
       imageDivs[currentImage].style.display = "flex";
       imageDiv.style.left = `50%`;
-      imageDiv.style.top = `55%`;
+      imageDiv.style.top = `400px`;
     });
   });
 })();
