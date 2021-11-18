@@ -4,9 +4,11 @@
 
   let startGame = document.getElementById("startgame");
   let gameControl = document.getElementById("gamecontrol");
+  let gameContainer = document.getElementById("gamecontainer");
   let game = document.getElementById("game");
   let score = document.getElementById("score");
-  let actionArea = document.getElementById("actions");
+  let rollButton = document.getElementById("roll");
+  let passButton = document.getElementById("pass");
 
   let gameData = {
     dice: [
@@ -26,7 +28,13 @@
     gameEnd: 29,
   };
 
+  function showGameBoard() {
+    gameContainer.style.visibility = "visible";
+    score.style.visibility = "visible";
+  }
+
   startGame.addEventListener("click", function (e) {
+    showGameBoard();
     gameControl.innerHTML = "<h2>The Game Has Started</h2>";
     gameControl.innerHTML += '<button id="quit">Wanna Quit?</button>';
 
@@ -34,22 +42,39 @@
       location.reload();
     });
 
+    passButton.addEventListener("click", function (e) {
+      gameData.index ? (gameData.index = 0) : (gameData.index = 1);
+      setUpTurn();
+    });
+
+    rollButton.addEventListener("click", function (e) {
+      throwDice();
+    });
+
     setUpTurn();
+    showCurrentScore();
   });
+
+  function showControls() {
+    rollButton.style.visibility = "visible";
+    passButton.style.visibility = "visible";
+  }
+
+  function hideControls() {
+    rollButton.style.visibility = "hidden";
+    passButton.style.visibility = "hidden";
+  }
 
   function setUpTurn() {
     game.innerHTML = `<p>Roll the dice for the ${
       gameData.players[gameData.index]
     }</p>`;
-    actionArea.innerHTML = '<button id="roll">Roll the Dice</button>';
-
-    document.getElementById("roll").addEventListener("click", function (e) {
-      throwDice();
-    });
+    showCurrentScore();
+    showControls();
   }
 
   function throwDice() {
-    actionArea.innerHTML = "";
+    hideControls();
     gameData.roll1 = Math.floor(Math.random() * 6) + 1;
     gameData.roll2 = Math.floor(Math.random() * 6) + 1;
     game.innerHTML = `<p>Roll the dice for the ${
@@ -77,19 +102,7 @@
     } else {
       gameData.score[gameData.index] =
         gameData.score[gameData.index] + gameData.rollSum;
-      actionArea.innerHTML =
-        '<button id="rollagain">Roll again</button> or <button id="pass">Pass</button>';
-
-      document
-        .getElementById("rollagain")
-        .addEventListener("click", function (e) {
-          setUpTurn();
-        });
-
-      document.getElementById("pass").addEventListener("click", function (e) {
-        gameData.index ? (gameData.index = 0) : (gameData.index = 1);
-        setUpTurn();
-      });
+      showControls();
 
       checkWinningCondition();
     }
@@ -97,10 +110,12 @@
 
   function checkWinningCondition() {
     if (gameData.score[gameData.index] > gameData.gameEnd) {
-      score.innerHTML = `<h2>${gameData.players[gameData.index]} wins with ${
+      game.innerHTML = `<h2>${gameData.players[gameData.index]} wins with ${
         gameData.score[gameData.index]
       } points!`;
-      actionArea.innerHTML = "";
+      hideControls();
+      score.style.visibility = "hidden";
+      score.innerHTML = "";
       document.getElementById("quit").innerHTML = "Start a New Game?";
     } else {
       showCurrentScore();
@@ -108,6 +123,10 @@
   }
 
   function showCurrentScore() {
-    score.innerHTML = `<p>The score is currently <strong>${gameData.players[0]} ${gameData.score[0]}</strong> <strong>${gameData.players[1]} ${gameData.score[1]}</strong></p>`;
+    score.innerHTML = `<strong class="${gameData.index ? "" : "active"}">${
+      gameData.players[0]
+    }: ${gameData.score[0]}</strong> <strong class="${
+      gameData.index ? "active" : ""
+    }">${gameData.players[1]}: ${gameData.score[1]}</strong>`;
   }
 })();

@@ -1,25 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-color-one: #42ad6f;
+  --bg-color-two: #348555;
+  --text-color: #ffffff;
+}
+
 body {
-    font-family: Arial;
-    color: #333;
-    padding: 50px;
-    line-height: 1.5em;
+  max-width: 1366px;
+  min-width: 900px;
+  background-color: var(--bg-color-one);
+  color: var(--text-color);
+  font-family: "Arial";
+  padding-top: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+  line-height: 1.5em;
 }
 
-button { 
-    padding: 10px;
+#instructions {
+  margin: 10px;
+  background-color: var(--bg-color-two);
+  padding: 10px;
 }
 
-div {
-    padding: 20px;
+button {
+  font-weight: bold;
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 10px;
+  color: rgb(32, 32, 32);
+  background: #39ff14;
+  box-shadow: 0 0 50px #39ff14;
+  cursor: pointer;
 }
 
-#gamecontrol, #score {
-    background-color: aliceblue;
+#gamecontrol {
+  padding: 10px 0 20px 40px;
+}
+
+#gamecontrol h2 {
+  margin-bottom: 15px;
+}
+
+#gamecontainer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  visibility: hidden;
 }
 
 #game {
-    background-color:#eaeaea;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  height: 220px;
 }
-#actions {
-    background-color: silver;
+
+#roll,
+#pass {
+  visibility: hidden;
+}
+
+#score {
+  display: flex;
+  justify-content: center;
+  gap: 200px;
+  visibility: hidden;
+  padding: 20px;
+}
+
+#score strong {
+  padding: 10px;
+  border: 2px solid transparent;
+}
+
+.active {
+  border: 2px solid white;
 }
