@@ -9,8 +9,8 @@
   let score = document.getElementById("score");
   let rollButton = document.getElementById("roll");
   let passButton = document.getElementById("pass");
-  const player1Sound = new Audio("sounds/player1.mp3");
-  const player2Sound = new Audio("sounds/player2.mp3");
+  const player1Sound = new Audio("sounds/Player1.mp3");
+  const player2Sound = new Audio("sounds/Player2.mp3");
 
   let gameData = {
     dice: [
