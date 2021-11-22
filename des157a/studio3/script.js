@@ -9,6 +9,8 @@
   let score = document.getElementById("score");
   let rollButton = document.getElementById("roll");
   let passButton = document.getElementById("pass");
+  const player1Sound = new Audio("sounds/player1.mp3");
+  const player2Sound = new Audio("sounds/player2.mp3");
 
   let gameData = {
     dice: [
@@ -69,6 +71,11 @@
     game.innerHTML = `<p>Roll the dice for the ${
       gameData.players[gameData.index]
     }</p>`;
+    if (gameData.index == 0) {
+      player1Sound.play();
+    } else {
+      player2Sound.play();
+    }
     showCurrentScore();
     showControls();
   }
