@@ -1,0 +1,114 @@
+:root {
+  --bg-color-one: #202c39;
+  --bg-color-two: #1b2631;
+  --text-color: #ffffff;
+  overflow-x: hidden;
+  background: url("./images/blurred_camera.png") no-repeat center center fixed;
+  background-size: cover;
+}
+
+p {
+  margin: 0;
+}
+
+#intro {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  color: white;
+}
+
+#introText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 34px;
+  color: white;
+}
+
+#chevron {
+  display: none;
+  position: absolute;
+  top: 80vh;
+  transform: scale(9) rotate(90deg);
+  animation: bounce 3s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  25%,
+  35%,
+  45%,
+  100% {
+    transform: scale(9) rotate(90deg) translateX(0);
+  }
+  20% {
+    transform: scale(9) rotate(90deg) translateX(-5px);
+  }
+  30% {
+    transform: scale(9) rotate(90deg) translateX(-3px);
+  }
+  40% {
+    transform: scale(9) rotate(90deg) translateX(-1px);
+  }
+}
+
+#container {
+  position: absolute;
+  top: 100vh;
+  width: 100%;
+  margin: auto;
+  padding-top: 200px;
+  background-color: var(--bg-color-one);
+  color: var(--text-color);
+  font-family: "Arial";
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30vh;
+}
+
+.imageAndText {
+  position: relative;
+  left: 0px;
+  display: flex;
+  gap: 50px;
+  width: 1000px;
+}
+
+.imageAndText img {
+  position: relative;
+  left: 0px;
+  background-color: var(--bg-color-two);
+  padding: 20px 20px 20px 20px;
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.imageAndText div {
+  position: relative;
+  left: 0px;
+  margin-top: 10%;
+}
+
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 80px;
+  margin-top: 200px;
+  padding: 10px 0 10px 0;
+  background-color: var(--bg-color-two);
+}
+
+footer a {
+  color: var(--text-color);
+}
