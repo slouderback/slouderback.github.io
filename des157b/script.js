@@ -6,6 +6,8 @@
   const banner = document.querySelector("#banner");
   const sections = document.querySelectorAll("section");
 
+  const cubeFaces = document.querySelectorAll(".cube_face");
+
   const waveDark = document.querySelector("#wave_dark");
   const waveLight = document.querySelector("#wave_light");
 
@@ -19,9 +21,15 @@
       body.className = "switch";
       banner.className = "switch";
       button.className = "switch";
+
       for (const section of sections) {
         section.className = "switch";
       }
+
+      for (const cubeFace of cubeFaces) {
+        cubeFace.classList.add("switch");
+      }
+
       waveDark.style.display = "none";
       waveLight.style.display = "block";
       mode = "light";
@@ -29,9 +37,15 @@
       body.removeAttribute("class");
       banner.removeAttribute("class");
       button.removeAttribute("class");
+
       for (const section of sections) {
         section.removeAttribute("class");
       }
+
+      for (const cubeFace of cubeFaces) {
+        cubeFace.classList.remove("switch");
+      }
+
       waveDark.style.display = "block";
       waveLight.style.display = "none";
       mode = "dark";

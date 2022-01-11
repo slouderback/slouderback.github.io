@@ -33,12 +33,10 @@ header {
   width: 1100px;
   height: 250px;
   margin: auto;
-  background-color: rgb(46, 46, 46);
   overflow: hidden;
 }
 
 #banner.switch {
-  background-color: rgb(243, 243, 243);
   color: rgb(235, 235, 235);
   transition: all 2s;
 }
@@ -83,31 +81,31 @@ header {
   font-weight: bold;
   color: white;
   text-align: center;
+  background: hsla(0, 0%, 40%, 0.7);
+  transition: background-color 2s;
+}
+
+.cube_face.switch {
+  background: hsla(0, 0%, 83%, 0.7);
 }
 
 .cube_face--front {
   transform: rotateY(0deg) translateZ(100px);
-  background: hsla(0, 0%, 40%, 0.7);
 }
 .cube_face--right {
   transform: rotateY(90deg) translateZ(100px);
-  background: hsla(0, 0%, 40%, 0.7);
 }
 .cube_face--back {
   transform: rotateY(180deg) translateZ(100px);
-  background: hsla(0, 0%, 40%, 0.7);
 }
 .cube_face--left {
   transform: rotateY(-90deg) translateZ(100px);
-  background: hsla(0, 0%, 40%, 0.7);
 }
 .cube_face--top {
   transform: rotateX(90deg) translateZ(100px);
-  background: hsla(0, 0%, 40%, 0.7);
 }
 .cube_face--bottom {
   transform: rotateX(-90deg) translateZ(100px);
-  background: hsla(0, 0%, 40%, 0.7);
 }
 
 label {
