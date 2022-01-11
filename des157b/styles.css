@@ -1,0 +1,213 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #222222;
+  color: rgb(235, 235, 235);
+  transition: all 2s;
+}
+
+body.switch {
+  background-color: rgb(235, 235, 235);
+  color: #333;
+}
+
+#container {
+  position: relative;
+  width: 100%;
+  max-width: 1366px;
+  /* make sure the columns don't get too small and text stays readable */
+  min-width: 900px;
+  margin: 1em auto;
+}
+
+header {
+  margin: 0 auto 2em auto;
+}
+
+#banner {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  width: 1100px;
+  height: 250px;
+  margin: auto;
+  background-color: rgb(46, 46, 46);
+  overflow: hidden;
+}
+
+#banner.switch {
+  background-color: rgb(243, 243, 243);
+  color: rgb(235, 235, 235);
+  transition: all 2s;
+}
+
+.cube_container {
+  width: 200px;
+  height: 200px;
+  margin-top: auto;
+  margin-bottom: auto;
+  perspective: 1600px;
+}
+
+.cube {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: translateZ(-100px);
+  transition: transform 1s;
+  animation-name: spinner;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 6s;
+}
+
+@keyframes spinner {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
+}
+
+.cube_face {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+  line-height: 200px;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+.cube_face--front {
+  transform: rotateY(0deg) translateZ(100px);
+  background: hsla(0, 0%, 40%, 0.7);
+}
+.cube_face--right {
+  transform: rotateY(90deg) translateZ(100px);
+  background: hsla(0, 0%, 40%, 0.7);
+}
+.cube_face--back {
+  transform: rotateY(180deg) translateZ(100px);
+  background: hsla(0, 0%, 40%, 0.7);
+}
+.cube_face--left {
+  transform: rotateY(-90deg) translateZ(100px);
+  background: hsla(0, 0%, 40%, 0.7);
+}
+.cube_face--top {
+  transform: rotateX(90deg) translateZ(100px);
+  background: hsla(0, 0%, 40%, 0.7);
+}
+.cube_face--bottom {
+  transform: rotateX(-90deg) translateZ(100px);
+  background: hsla(0, 0%, 40%, 0.7);
+}
+
+label {
+  margin-right: 10px;
+}
+
+main {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1em auto;
+}
+
+main section {
+  width: 20%;
+  border: 1px rgb(116, 116, 116) solid;
+  margin: 0 0.25em;
+  padding: 1em;
+}
+
+a {
+  text-decoration: none;
+}
+
+ol,
+ul {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+section h3 {
+  padding-left: 0.5em;
+}
+
+section li {
+  padding-left: 1.2em;
+}
+
+section a {
+  line-height: 1.1em;
+  display: inline-block;
+  padding: 0.5em;
+  color: rgb(151, 151, 151);
+}
+
+section a:hover {
+  background-color: rgb(184, 184, 184);
+  color: #333;
+}
+
+section.switch a {
+  color: #333;
+}
+
+section.switch a:hover {
+  background-color: #333;
+  color: rgb(235, 235, 235);
+}
+
+button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 12px;
+  background-color: #333;
+  color: rgb(235, 235, 235);
+  border: 1px solid transparent;
+}
+
+button:hover {
+  background-color: rgb(235, 235, 235);
+  color: #333;
+  cursor: pointer;
+}
+
+button.switch {
+  background-color: rgb(235, 235, 235);
+  color: #333;
+  border-color: #333;
+}
+
+button.switch:hover {
+  background-color: #333;
+  color: rgb(235, 235, 235);
+}
+
+footer {
+  position: relative;
+}
+
+footer #footer_links {
+  position: absolute;
+  bottom: 18px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  /* background-color: red; */
+}
+
+footer #footer_links a {
+  text-decoration: none;
+  color: white;
+}
