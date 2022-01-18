@@ -202,7 +202,6 @@ footer #footer_links {
   width: 100%;
   display: flex;
   justify-content: space-around;
-  /* background-color: red; */
 }
 
 footer #footer_links a {
