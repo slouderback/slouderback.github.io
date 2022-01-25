@@ -26,6 +26,10 @@
     active = 1;
   });
 
+  switchButton.addEventListener("click", function (e) {
+    body.className = "switch";
+  });
+
   async function getData() {
     const barkingData = await fetch("data.json");
     data = await barkingData.json();

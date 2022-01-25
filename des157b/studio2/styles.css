@@ -6,6 +6,10 @@ body {
   font-family: "Courier New", Courier, monospace;
 }
 
+body.switch {
+  background-color: #a7a7a7;
+}
+
 header {
   margin: auto;
   margin-top: 10px;
