@@ -5,6 +5,7 @@
   const rawDataButton = document.getElementById("rawDataButton");
   const graphButton = document.getElementById("graphButton");
   const projectionButton = document.getElementById("projectionButton");
+  const switchButton = document.getElementById("switchButton");
 
   let data;
 
