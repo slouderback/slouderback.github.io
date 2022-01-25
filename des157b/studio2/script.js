@@ -32,9 +32,13 @@
   switchButton.addEventListener("click", function (e) {
     if (mode === "dark") {
       body.className = "switch";
+      switchButton.className = "switch";
+      // dataDisplay.className = "switch";
       mode = "light";
     } else {
       body.removeAttribute("class");
+      switchButton.removeAttribute("class");
+      // dataDisplay.removeAttribute("class");
       mode = "dark";
     }
   });
