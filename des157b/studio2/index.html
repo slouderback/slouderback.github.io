@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Blockbuster Video!</title>
+    <title>Check Yourself</title>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
       rel="stylesheet"
@@ -12,18 +12,27 @@
   </head>
 
   <body>
+    <header>
+      <h2>Bark Frequency</h2>
+      <!-- <div id="questionMark">?</div>
+      <div id="helpText">
+        <p>
+          This site shows data about how often my dogs bark. The data was
+          collected over a time span of two hours where I took down the total
+          number of times my dog had barked since the start.
+        </p>
+      </div> -->
+    </header>
+
     <main>
-      <video
-        id="video"
-        poster="images/thumbnail.png"
-        muted
-        autoplay
-        loop
-        playsinline
-      >
-        <source src="media/DES157B-Video.mp4" type="video/mp4" />
-        <source src="media/DES157B-Video.webm" type="video/webm" />
-      </video>
+      <div id="dataContainer">
+        <div id="rows">
+          <div id="rawDataButton">Raw Data</div>
+          <div id="graphButton">Graph</div>
+          <!-- <div id="projectionButton">Projection</div> -->
+        </div>
+        <div id="dataDisplay"></div>
+      </div>
     </main>
 
     <footer>
