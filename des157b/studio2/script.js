@@ -9,13 +9,18 @@
   let data;
 
   let active = 0;
+  rawDataButton.style.backgroundColor = "#747474";
 
   rawDataButton.addEventListener("click", function (e) {
+    rawDataButton.style.backgroundColor = "#747474";
+    graphButton.style.backgroundColor = "#575757";
     getData();
     active = 0;
   });
 
   graphButton.addEventListener("click", function (e) {
+    rawDataButton.style.backgroundColor = "#575757";
+    graphButton.style.backgroundColor = "#747474";
     getData();
     active = 1;
   });
@@ -51,7 +56,7 @@
     let html = "";
 
     for (let i = 0; i < data.length; i++) {
-      html += `<div>${data[i].time}</div>`;
+      html += `<div>${data[i].time} minutes</div>`;
       html += `<div style="background-color: grey; max-width: ${
         data[i].num * 50
       }px">&#8205</div>`;

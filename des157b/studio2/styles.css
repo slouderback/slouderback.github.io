@@ -1,9 +1,9 @@
 body {
   margin: auto;
   max-width: 768px;
-  /* border: 1px solid red; */
   background-color: #222222;
   color: rgb(235, 235, 235);
+  font-family: "Courier New", Courier, monospace;
 }
 
 header {
@@ -40,6 +40,7 @@ main {
 #dataContainer {
   margin: auto;
   width: 80%;
+  font-size: 16px;
 }
 
 #rows {
