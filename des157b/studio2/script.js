@@ -7,6 +7,8 @@
   const projectionButton = document.getElementById("projectionButton");
   const switchButton = document.getElementById("switchButton");
 
+  const body = document.querySelector("body");
+
   let data;
 
   let active = 0;
@@ -26,8 +28,15 @@
     active = 1;
   });
 
+  let mode = "dark";
   switchButton.addEventListener("click", function (e) {
-    body.className = "switch";
+    if (mode === "dark") {
+      body.className = "switch";
+      mode = "light";
+    } else {
+      body.removeAttribute("class");
+      mode = "dark";
+    }
   });
 
   async function getData() {
