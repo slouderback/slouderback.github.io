@@ -1,0 +1,33 @@
+body {
+  font-family: Tahoma;
+}
+
+.section {
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+h1 {
+  font-size: 68px;
+}
+
+.moveUp {
+  margin-bottom: 175px;
+}
+
+.creditedImages {
+  display: flex;
+  gap: 50px;
+}
+
+.creditText {
+  font-size: 16px;
+}
+
+.title {
+  margin-bottom: 10px;
+}
+
+.tattooPicture {
+  margin-top: 20px;
+}
