@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #232b30;
+  color: rgb(235, 235, 235);
+  margin: 50px 20%;
+}
+
+header {
+  text-align: center;
+}
+
+main {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+div a {
+  color: rgb(175, 175, 175);
+}
+
+footer #footer_links {
+  display: flex;
+  justify-content: space-around;
+}
+
+footer #footer_links a {
+  color: rgb(235, 235, 235);
+}
