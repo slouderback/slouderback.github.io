@@ -3,6 +3,7 @@
 }
 
 body {
+  font-family: "Helvetica";
   background-color: #232b30;
   color: rgb(235, 235, 235);
   margin: 50px 20%;
@@ -15,6 +16,7 @@ header {
 main {
   display: flex;
   justify-content: space-evenly;
+  gap: 20px;
 }
 
 div a {
