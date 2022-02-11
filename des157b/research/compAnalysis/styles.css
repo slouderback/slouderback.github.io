@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica";
+  background-color: #232b30;
+  color: rgb(235, 235, 235);
+  margin: 50px 20%;
+}
+
+header {
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.textWithImage {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.textWithImage > * {
+  flex: 1;
+}
+
+#mediaCollageGroup {
+  width: 50%;
+}
+
+div a {
+  color: rgb(241, 241, 241);
+}
+
+footer #footer_links {
+  display: flex;
+  justify-content: space-around;
+}
+
+footer #footer_links a {
+  color: rgb(235, 235, 235);
+}
