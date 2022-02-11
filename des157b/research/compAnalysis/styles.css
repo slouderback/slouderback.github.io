@@ -6,7 +6,7 @@ body {
   font-family: "Helvetica";
   background-color: #232b30;
   color: rgb(235, 235, 235);
-  margin: 50px 20%;
+  margin: 50px 20% 0px;
 }
 
 header {
@@ -17,6 +17,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 100px;
+  margin-bottom: 50px;
 }
 
 .textWithImage {
@@ -29,7 +30,7 @@ main {
   flex: 1;
 }
 
-#mediaCollageGroup {
+.smallImage {
   width: 50%;
 }
 
