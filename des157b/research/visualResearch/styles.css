@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica";
+  background-color: #232b30;
+  color: rgb(235, 235, 235);
+  margin: 50px 20% 0px;
+}
+
+header {
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  margin-bottom: 50px;
+}
+
+footer #footer_links {
+  display: flex;
+  justify-content: space-around;
+}
+
+footer #footer_links a {
+  color: rgb(235, 235, 235);
+}
