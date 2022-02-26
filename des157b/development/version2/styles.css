@@ -1,0 +1,131 @@
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.fullPage {
+  height: 100vh;
+}
+
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+#page1 {
+  background: linear-gradient(170deg, #425971 50%, #fff 50%);
+  display: flex;
+  justify-content: center;
+  gap: 280px;
+}
+
+#frontPageText {
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  color: white;
+  margin-top: 30vh;
+}
+
+form {
+  max-width: 300px;
+  margin-top: auto;
+  margin-bottom: auto;
+  color: rgb(199, 199, 199);
+}
+
+#formContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 30px;
+  background-color: #344c66;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 24px;
+}
+
+#submit {
+  border: none;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  background: #3498db;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+#submit:hover {
+  cursor: pointer;
+  background: #3cb0fd;
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+
+.chartWrapper {
+  width: 50%;
+  height: 50%;
+}
+
+#myChart {
+  background-color: white;
+}
+
+.page2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #758da8;
+}
+
+footer {
+  position: relative;
+}
+
+footer #footer_links {
+  position: absolute;
+  bottom: 18px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+footer #footer_links a {
+  text-decoration: none;
+  /* color: white; */
+}
