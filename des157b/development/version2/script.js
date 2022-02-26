@@ -13,6 +13,11 @@
   let viewDataWeb = [0, 0, 0, 0];
   let viewDataApps = [0, 0, 0, 0];
 
+  let createDataNewspaperBooks = [0, 0, 0, 0];
+  let createDataTelevision = [0, 0, 0, 0];
+  let createDataWeb = [0, 0, 0, 0];
+  let createDataApps = [0, 0, 0, 0];
+
   var snackbar = document.getElementById("snackbar");
 
   form.addEventListener("submit", function (e) {
@@ -50,21 +55,32 @@
     const query = new Parse.Query(formResponses);
     const results = await query.ascending("createdAt").find();
     results.forEach((row) => {
-      console.log(row.id + " " + row.get("generation"));
       let generation = row.get("generation");
       let viewPlatform = row.get("viewPlatform");
+      let createPlatform = row.get("createPlatform");
 
-      let arrayToModify;
+      let viewArrayToModify;
+      let createArrayToModify;
       let positionToModify;
 
       if (viewPlatform == "newspaperBooks") {
-        arrayToModify = viewDataNewspaperBooks;
+        viewArrayToModify = viewDataNewspaperBooks;
       } else if (viewPlatform == "television") {
-        arrayToModify = viewDataTelevision;
+        viewArrayToModify = viewDataTelevision;
       } else if (viewPlatform == "web") {
-        arrayToModify = viewDataWeb;
+        viewArrayToModify = viewDataWeb;
       } else if (viewPlatform == "apps") {
-        arrayToModify = viewDataApps;
+        viewArrayToModify = viewDataApps;
+      }
+
+      if (createPlatform == "newspaperBooks") {
+        createArrayToModify = createDataNewspaperBooks;
+      } else if (createPlatform == "television") {
+        createArrayToModify = createDataTelevision;
+      } else if (createPlatform == "web") {
+        createArrayToModify = createDataWeb;
+      } else if (createPlatform == "apps") {
+        createArrayToModify = createDataApps;
       }
 
       if (generation == "boomers") {
@@ -77,7 +93,8 @@
         positionToModify = 3;
       }
 
-      arrayToModify[positionToModify]++;
+      viewArrayToModify[positionToModify]++;
+      createArrayToModify[positionToModify]++;
     });
     chartIt();
   }
@@ -85,15 +102,12 @@
   fetchData();
 
   async function saveNewFormResponse(a, b, c) {
-    //Create your Parse Object
     const formResponses = new Parse.Object("form_responses");
 
-    //Define its attributes
     formResponses.set("generation", a);
     formResponses.set("viewPlatform", b);
     formResponses.set("createPlatform", c);
     try {
-      //Save the Object
       let result = await formResponses.save();
       form.reset();
       showSuccess("Form submit success!");
@@ -106,8 +120,8 @@
   }
 
   function chartIt() {
-    const ctx = document.getElementById("myChart").getContext("2d");
-    const myChart = new Chart(ctx, {
+    const ctx1 = document.getElementById("media1").getContext("2d");
+    const media1 = new Chart(ctx1, {
       type: "bar",
       data: {
         labels: ["Baby Boomers", "Generation X", "Millennials", "Generation Z"],
@@ -115,22 +129,62 @@
           {
             data: viewDataNewspaperBooks,
             label: "Newspaper/Books",
-            backgroundColor: "red",
+            backgroundColor: "rgba(255, 99, 132, 0.5)",
           },
           {
             data: viewDataTelevision,
             label: "Television",
-            backgroundColor: "green",
+            backgroundColor: "rgba(255, 159, 64, 0.5)",
           },
           {
             data: viewDataWeb,
             label: "Web",
-            backgroundColor: "blue",
+            backgroundColor: "rgba(75, 192, 192, 0.5)",
           },
           {
             data: viewDataApps,
             label: "Apps",
-            backgroundColor: "yellow",
+            backgroundColor: "rgba(54, 162, 235, 0.5)",
+          },
+        ],
+      },
+      options: {
+        scales: {
+          x: {
+            stacked: true,
+          },
+          y: {
+            stacked: true,
+          },
+        },
+      },
+    });
+
+    const ctx2 = document.getElementById("media2").getContext("2d");
+    const media2 = new Chart(ctx2, {
+      type: "bar",
+      data: {
+        labels: ["Baby Boomers", "Generation X", "Millennials", "Generation Z"],
+        datasets: [
+          {
+            data: createDataNewspaperBooks,
+            label: "Newspaper/Books",
+            backgroundColor: "rgba(255, 99, 132, 0.5)",
+          },
+          {
+            data: createDataTelevision,
+            label: "Television",
+            backgroundColor: "rgba(255, 159, 64, 0.5)",
+          },
+          {
+            data: createDataWeb,
+            label: "Web",
+            backgroundColor: "rgba(75, 192, 192, 0.5)",
+          },
+          {
+            data: createDataApps,
+            label: "Apps",
+            backgroundColor: "rgba(54, 162, 235, 0.5)",
           },
         ],
       },

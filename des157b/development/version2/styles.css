@@ -96,21 +96,48 @@ form {
   text-decoration: none;
 }
 
-.chartWrapper {
-  width: 50%;
-  height: 50%;
-}
-
-#myChart {
-  background-color: white;
-}
-
 .page2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 10px;
   background-color: #758da8;
+}
+
+#consumptionHeader {
+  font-size: 28px;
+}
+
+.chartWrapper {
+  width: 50%;
+  height: 50%;
+}
+
+#media1 {
+  background-color: rgb(255, 255, 255);
+}
+
+.page3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #758da8;
+}
+
+#creationHeader {
+  font-size: 28px;
+}
+
+.chartWrapper {
+  width: 50%;
+  height: 50%;
+}
+
+#media2 {
+  background-color: rgb(255, 255, 255);
 }
 
 footer {
