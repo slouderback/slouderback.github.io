@@ -54,45 +54,30 @@
       let generation = row.get("generation");
       let viewPlatform = row.get("viewPlatform");
 
-      if (generation == "boomers" && viewPlatform == "newspaperBooks") {
-        viewDataNewspaperBooks[0]++;
-      } else if (generation == "boomers" && viewPlatform == "television") {
-        viewDataTelevision[0]++;
-      } else if (generation == "boomers" && viewPlatform == "web") {
-        viewDataWeb[0]++;
-      } else if (generation == "boomers" && viewPlatform == "apps") {
-        viewDataApps[0]++;
+      let arrayToModify;
+      let positionToModify;
+
+      if (viewPlatform == "newspaperBooks") {
+        arrayToModify = viewDataNewspaperBooks;
+      } else if (viewPlatform == "television") {
+        arrayToModify = viewDataTelevision;
+      } else if (viewPlatform == "web") {
+        arrayToModify = viewDataWeb;
+      } else if (viewPlatform == "apps") {
+        arrayToModify = viewDataApps;
       }
 
-      if (generation == "genx" && viewPlatform == "newspaperBooks") {
-        viewDataNewspaperBooks[1]++;
-      } else if (generation == "genx" && viewPlatform == "television") {
-        viewDataTelevision[1]++;
-      } else if (generation == "genx" && viewPlatform == "web") {
-        viewDataWeb[1]++;
-      } else if (generation == "genx" && viewPlatform == "apps") {
-        viewDataApps[1]++;
+      if (generation == "boomers") {
+        positionToModify = 0;
+      } else if (generation == "genx") {
+        positionToModify = 1;
+      } else if (generation == "millennials") {
+        positionToModify = 2;
+      } else if (generation == "genz") {
+        positionToModify = 3;
       }
 
-      if (generation == "millennials" && viewPlatform == "newspaperBooks") {
-        viewDataNewspaperBooks[2]++;
-      } else if (generation == "millennials" && viewPlatform == "television") {
-        viewDataTelevision[2]++;
-      } else if (generation == "millennials" && viewPlatform == "web") {
-        viewDataWeb[2]++;
-      } else if (generation == "millennials" && viewPlatform == "apps") {
-        viewDataApps[2]++;
-      }
-
-      if (generation == "genz" && viewPlatform == "newspaperBooks") {
-        viewDataNewspaperBooks[3]++;
-      } else if (generation == "genz" && viewPlatform == "television") {
-        viewDataTelevision[3]++;
-      } else if (generation == "genz" && viewPlatform == "web") {
-        viewDataWeb[3]++;
-      } else if (generation == "genz" && viewPlatform == "apps") {
-        viewDataApps[3]++;
-      }
+      arrayToModify[positionToModify]++;
     });
     chartIt();
   }
