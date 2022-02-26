@@ -8,7 +8,10 @@
   Parse.serverURL = "https://parseapi.back4app.com/";
 
   const form = document.getElementById("form");
-  let data = [];
+  let viewDataNewspaperBooks = [0, 0, 0, 0];
+  let viewDataTelevision = [0, 0, 0, 0];
+  let viewDataWeb = [0, 0, 0, 0];
+  let viewDataApps = [0, 0, 0, 0];
 
   var snackbar = document.getElementById("snackbar");
 
@@ -46,7 +49,52 @@
     const formResponses = Parse.Object.extend("form_responses");
     const query = new Parse.Query(formResponses);
     const results = await query.ascending("createdAt").find();
-    console.log(results);
+    results.forEach((row) => {
+      console.log(row.id + " " + row.get("generation"));
+      let generation = row.get("generation");
+      let viewPlatform = row.get("viewPlatform");
+
+      if (generation == "boomers" && viewPlatform == "newspaperBooks") {
+        viewDataNewspaperBooks[0]++;
+      } else if (generation == "boomers" && viewPlatform == "television") {
+        viewDataTelevision[0]++;
+      } else if (generation == "boomers" && viewPlatform == "web") {
+        viewDataWeb[0]++;
+      } else if (generation == "boomers" && viewPlatform == "apps") {
+        viewDataApps[0]++;
+      }
+
+      if (generation == "genx" && viewPlatform == "newspaperBooks") {
+        viewDataNewspaperBooks[1]++;
+      } else if (generation == "genx" && viewPlatform == "television") {
+        viewDataTelevision[1]++;
+      } else if (generation == "genx" && viewPlatform == "web") {
+        viewDataWeb[1]++;
+      } else if (generation == "genx" && viewPlatform == "apps") {
+        viewDataApps[1]++;
+      }
+
+      if (generation == "millennials" && viewPlatform == "newspaperBooks") {
+        viewDataNewspaperBooks[2]++;
+      } else if (generation == "millennials" && viewPlatform == "television") {
+        viewDataTelevision[2]++;
+      } else if (generation == "millennials" && viewPlatform == "web") {
+        viewDataWeb[2]++;
+      } else if (generation == "millennials" && viewPlatform == "apps") {
+        viewDataApps[2]++;
+      }
+
+      if (generation == "genz" && viewPlatform == "newspaperBooks") {
+        viewDataNewspaperBooks[3]++;
+      } else if (generation == "genz" && viewPlatform == "television") {
+        viewDataTelevision[3]++;
+      } else if (generation == "genz" && viewPlatform == "web") {
+        viewDataWeb[3]++;
+      } else if (generation == "genz" && viewPlatform == "apps") {
+        viewDataApps[3]++;
+      }
+    });
+    chartIt();
   }
 
   fetchData();
@@ -72,41 +120,45 @@
     }
   }
 
-  const ctx = document.getElementById("myChart").getContext("2d");
-  const myChart = new Chart(ctx, {
-    type: "bar",
-    data: {
-      labels: ["Baby Boomers", "Generation X", "Millennials", "Generation Z"],
-      datasets: [
-        {
-          label: "# of responses",
-          data: [12, 19, 3, 5, 2, 3],
-          backgroundColor: [
-            "rgba(255, 99, 132, 0.2)",
-            "rgba(54, 162, 235, 0.2)",
-            "rgba(255, 206, 86, 0.2)",
-            "rgba(75, 192, 192, 0.2)",
-            "rgba(153, 102, 255, 0.2)",
-            "rgba(255, 159, 64, 0.2)",
-          ],
-          borderColor: [
-            "rgba(255, 99, 132, 1)",
-            "rgba(54, 162, 235, 1)",
-            "rgba(255, 206, 86, 1)",
-            "rgba(75, 192, 192, 1)",
-            "rgba(153, 102, 255, 1)",
-            "rgba(255, 159, 64, 1)",
-          ],
-          borderWidth: 1,
-        },
-      ],
-    },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true,
+  function chartIt() {
+    const ctx = document.getElementById("myChart").getContext("2d");
+    const myChart = new Chart(ctx, {
+      type: "bar",
+      data: {
+        labels: ["Baby Boomers", "Generation X", "Millennials", "Generation Z"],
+        datasets: [
+          {
+            data: viewDataNewspaperBooks,
+            label: "Newspaper/Books",
+            backgroundColor: "red",
+          },
+          {
+            data: viewDataTelevision,
+            label: "Television",
+            backgroundColor: "green",
+          },
+          {
+            data: viewDataWeb,
+            label: "Web",
+            backgroundColor: "blue",
+          },
+          {
+            data: viewDataApps,
+            label: "Apps",
+            backgroundColor: "yellow",
+          },
+        ],
+      },
+      options: {
+        scales: {
+          x: {
+            stacked: true,
+          },
+          y: {
+            stacked: true,
+          },
         },
       },
-    },
-  });
+    });
+  }
 })();
