@@ -155,6 +155,9 @@
           },
           y: {
             stacked: true,
+            ticks: {
+              stepSize: 1,
+            },
           },
         },
       },
@@ -195,6 +198,9 @@
           },
           y: {
             stacked: true,
+            ticks: {
+              stepSize: 1,
+            },
           },
         },
       },

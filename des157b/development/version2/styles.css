@@ -49,7 +49,7 @@ body {
 }
 
 #page1 {
-  background: linear-gradient(170deg, #425971 50%, #fff 50%);
+  background: linear-gradient(170deg, #425971 60%, #fff 60%);
   display: flex;
   justify-content: center;
   gap: 280px;
@@ -58,9 +58,17 @@ body {
 #frontPageText {
   display: flex;
   flex-direction: column;
-  max-width: 350px;
+  max-width: 550px;
   color: white;
   margin-top: 30vh;
+}
+
+#headerText {
+  font-size: 48px;
+}
+
+#subText {
+  font-size: 22px;
 }
 
 form {
@@ -77,6 +85,11 @@ form {
   padding: 30px;
   background-color: #344c66;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 24px;
+}
+
+#formHeader {
+  font-size: 20px;
+  font-weight: bold;
 }
 
 #submit {
