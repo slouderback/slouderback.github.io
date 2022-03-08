@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Feasibility Report</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+    <script src="https://npmcdn.com/parse/dist/parse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <main>
+      <div class="fullPage" id="page1">
+        <div id="snackbar"></div>
+        <div class="page1height" id="frontPageText">
+          <div id="headerText">Media Consumption leads to creation</div>
+          <div id="subText">
+            Showing the connection between media consumption and media creation
+          </div>
+        </div>
+        <form class="page1height" id="form">
+          <div id="formContainer">
+            <div id="formHeader">Contribute to the data</div>
+            <div id="formTracker"></div>
+            <div class="tab">
+              <div>
+                <div>What is your generation?</div>
+                <div>
+                  <input
+                    type="radio"
+                    id="boomers"
+                    name="generation"
+                    value="boomers"
+                  />
+                  <label for="boomers">Baby Boomers</label>
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    id="genx"
+                    name="generation"
+                    value="genx"
+                  />
+                  <label for="genx">Generation X</label>
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    id="millennials"
+                    name="generation"
+                    value="millennials"
+                  />
+                  <label for="millennials">Millennials</label>
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    id="genz"
+                    name="generation"
+                    value="genz"
+                  />
+                  <label for="genz">Generation Z</label>
+                </div>
+              </div>
+
+              <div>
+                <div>What is the most common way you view media?</div>
+                <div>
+                  <input
+                    type="radio"
+                    id="newspaperBooksView"
+                    name="viewPlatform"
+                    value="newspaperBooks"
+                  />
+                  <label for="newspaperBooksView">Newspaper/Books</label>
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    id="televisionView"
+                    name="viewPlatform"
+                    value="television"
+                  />
+                  <label for="televisionView">Television</label>
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    id="webView"
+                    name="viewPlatform"
+                    value="web"
+                  />
+                  <label for="webView">Web</label>
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    id="appsView"
+                    name="viewPlatform"
+                    value="apps"
+                  />
+                  <label for="appsView">Apps</label>
+                </div>
+              </div>
+
+              <div>
+                <div>
+                  If you do/could create new media what platform would you want
+                  to use?
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    id="newspaperBooksCreate"
+                    name="createPlatform"
+                    value="newspaperBooks"
+                  />
+                  <label for="newspaperBooksCreate">Newspaper/Books</label>
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    id="televisionCreate"
+                    name="createPlatform"
+                    value="television"
+                  />
+                  <label for="televisionCreate">Television</label>
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    id="webCreate"
+                    name="createPlatform"
+                    value="web"
+                  />
+                  <label for="webCreate">Web</label>
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    id="appsCreate"
+                    name="createPlatform"
+                    value="apps"
+                  />
+                  <label for="appsCreate">Apps</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab">
+              <div>
+                <div>How much do you trust newspapers/books?</div>
+                <div class="sliderAndOutput">
+                  <input
+                    type="range"
+                    min="1"
+                    max="10"
+                    value="5"
+                    class="slider"
+                    name="newspaperBooksTrust"
+                    id="newspaperBooksTrust"
+                    oninput="this.nextElementSibling.value = this.value"
+                  />
+                  <output>5</output>
+                </div>
+              </div>
+
+              <div>
+                <div>How much do you trust television?</div>
+                <div class="sliderAndOutput">
+                  <input
+                    type="range"
+                    min="1"
+                    max="10"
+                    value="5"
+                    class="slider"
+                    name="televisionTrust"
+                    id="televisionTrust"
+                    oninput="this.nextElementSibling.value = this.value"
+                  />
+                  <output>5</output>
+                </div>
+              </div>
+
+              <div>
+                <div>How much do you trust the web?</div>
+                <div class="sliderAndOutput">
+                  <input
+                    type="range"
+                    min="1"
+                    max="10"
+                    value="5"
+                    class="slider"
+                    name="webTrust"
+                    id="webTrust"
+                    oninput="this.nextElementSibling.value = this.value"
+                  />
+                  <output>5</output>
+                </div>
+              </div>
+
+              <div>
+                <div>How much do you trust apps?</div>
+                <div class="sliderAndOutput">
+                  <input
+                    type="range"
+                    min="1"
+                    max="10"
+                    value="5"
+                    class="slider"
+                    name="appsTrust"
+                    id="appsTrust"
+                    oninput="this.nextElementSibling.value = this.value"
+                  />
+                  <output>5</output>
+                </div>
+              </div>
+
+              <div>
+                <label for="mediaText"
+                  >When you think of media what do you think of?</label
+                >
+                <textarea
+                  id="mediaText"
+                  name="mediaText"
+                  rows="3"
+                  cols="30"
+                ></textarea>
+              </div>
+            </div>
+
+            <div id="formControls">
+              <button id="previous">Previous</button>
+              <button id="next">Next</button>
+
+              <input type="submit" value="Send" id="submit" />
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="fullPage page2">
+        <div id="consumptionHeader">Media consumption data</div>
+
+        <div class="chartWrapper">
+          <canvas id="media1" width="800" height="400"></canvas>
+        </div>
+        <div class="dataAnalysis">
+          After formatting the data gained from the form we can see that there
+          is a strong drop off of usage of newspapers and books as the
+          generations go on. They get replaced by digitial media in the form of
+          websites and apps.
+        </div>
+      </div>
+      <div class="fullPage page3">
+        <div id="creationHeader">Media creation data</div>
+        <div class="chartWrapper">
+          <canvas id="media2" width="800" height="400"></canvas>
+        </div>
+        <div class="dataAnalysis">
+          The second part of the data is showing us that no matter the
+          generation there seems to be a shared interest in website content.
+          However as expected older generations are the ones interested in
+          creating content for print media. The main take away from this is that
+          it seems website content is the most general platform for all people.
+        </div>
+      </div>
+      <div class="fullPage page4">
+        <div id="trustHeader">Media trust data</div>
+        <div class="chartWrapper">
+          <canvas id="trust" width="800" height="400"></canvas>
+        </div>
+        <div class="dataAnalysis">______________________</div>
+      </div>
+    </main>
+
+    <footer>
+      <div id="footer_links">
+        <a
+          href="mailto:&#115;&#106;&#108;&#111;&#117;&#100;&#101;&#114;&#098;&#097;&#099;&#107;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;"
+          >Email Me</a
+        >
+        <a
+          href="https://validator.w3.org/check?uri=https://slouderback.github.io/des157b/development/version3/index.html"
+          >Valid HTML 5</a
+        >
+        <a href="https://jigsaw.w3.org/css-validator/check/referer"
+          >Valid CSS</a
+        >
+      </div>
+    </footer>
+  </body>
+</html>
