@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Case Study Template - Media Consumption</title>
+
+    <!--/ /-------- Normalize CSS --------/ /-->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      rel="stylesheet"
+    />
+
+    <!--/ /-------- Google Fonts --------/ /-->
+    <!-- add any google fonts you want to use -->
+
+    <!--/ /-------- Font Awesome --------/ /-->
+    <!--Add this if you want icons from font awesome
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">-->
+
+    <!--/ /-------- Your Styles --------/ /-->
+    <link href="styles.css" rel="stylesheet" />
+
+    <!--/ /-------- Needed For Mobile Devices --------/ /-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <header id="top">
+      <div class="container">
+        <h1>UX/UI Case Study Media Consumption</h1>
+        <p>Sam Louderback</p>
+        <address>
+          &#115;&#106;&#108;&#111;&#117;&#100;&#101;&#114;&#098;&#097;&#099;&#107;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;
+        </address>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#overview">overview</a></li>
+        <li><a href="#research">research</a></li>
+        <li><a href="#design">design</a></li>
+        <li><a href="#task">task</a></li>
+        <li><a href="#usability">usability</a></li>
+        <li><a href="#summary">summary</a></li>
+      </ul>
+    </nav>
+
+    <!--/ /-------- Overview Section --------/ /-->
+    <section id="overview">
+      <div class="container">
+        <h2>Project Overview</h2>
+        <img src="./images/landingPage.png" />
+        <div class="content">
+          <p>
+            This project will explore how different generations use media today
+            and how they choose to create new media themselves. The project will
+            be designed for both web and mobile thus requiring it to be
+            responsive to all sizes.
+          </p>
+
+          <p>
+            I will use chart.js to create the charts/plots such as bar graphs,
+            pie charts, and doughnut charts. For color I plan on allowing
+            different color schemes as a user choice however the format will be
+            a two color scheme. One color will be a primary and the other will
+            be the accent.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!--/ /-------- UX Research Section --------/ /-->
+    <section id="research">
+      <div class="container">
+        <h2>Project Research</h2>
+        <div class="content">
+          <p>
+            I looked at a lot of other websites that had a sort of inforgraphic
+            style to them for inspiration and understanding of best practices
+            for this type of site.
+          </p>
+
+          <p>
+            I noticed there was a lot of focus on glance value such that a user
+            could take a quick glance at your graphs and get an idea of whats
+            going on. Also consistent color usage was really key for this and
+            for understanding of the data when you start to examine it over
+            time.
+          </p>
+
+          <img
+            src="../../research/visualResearch/images/data-Visualisation-2-1.jpg"
+            id="dataVisualisation"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!--/ /-------- App Design Section --------/ /-->
+    <section id="design">
+      <div class="container">
+        <h2>App Design</h2>
+        <div class="content">
+          <img src="./images/stripe.png" id="stripeImage" />
+          <div class="gridEqualColumn">
+            <p>
+              I wanted to create a layout similar to stripes page. I have always
+              really liked their design style and I think how they allow images
+              to appear above everything else is an amazing technique.
+            </p>
+
+            <p>
+              With that in mind I made the form on the landing page try to look
+              as if it was above everything else. However I wanted to graphs to
+              be the center of the rest of the site so I went for a very
+              minimalist style throughout the whole site but even more post page
+              one. The color choice for the graphs was something I spent a long
+              time testing and trying to find the right ones. The thing I wanted
+              was for the color to really represent the medium it was attached
+              to while still being a set of colors that looked good together.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--/ /-------- Task Section --------/ /-->
+    <section id="task">
+      <div class="container">
+        <h2>Tasks For Users</h2>
+        <div class="content">
+          <div class="column">
+            <p>
+              Naviagation was left extermely simple because I have never found
+              sites with complex naviagation to be something I found as a
+              benifit. The one expection to this for me is if your site is a
+              store then having a "catalogue" drop down menu flow makes sense.
+            </p>
+
+            <p>
+              However since this site isnt that I left the naviagation to be
+              just scrolling down and clicking through pages on a form. There is
+              more subtle navigation within the charts themselves when you hover
+              certain over certain parts but none of that is central to the site
+              so im ok with leaving it in.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--/ /-------- Usability Test Section --------/ /-->
+    <section id="usability">
+      <div class="container">
+        <h2>Usability Testing &amp; Further Development</h2>
+        <div class="content">
+          <p>
+            Usability was mostly focused in the form because form progression
+            can be a huge driver of users leaving your site. Even though the
+            form isnt required I was worried if someone started it then gave up
+            halfway through the logical things to do would be close the site.
+            For this reason I made the form a two page flow and included the
+            tracker at the top.
+          </p>
+
+          <p>
+            The other major thing I noticed from usability was that while there
+            was a lot of work that had to be done to generate the graphs they
+            dont take more than a few seconds to fully understand for the user.
+            Because of this I went back and added in that second page of the
+            form to be able to generate more later content and also allow some
+            direct way for users to leave their response at a length that suits
+            them. One of the most interesting questions in the form is the final
+            question that allows users to write down anything that comes to mind
+            thus leading to a style of answers I no longer control. Eventually I
+            want to build a function that auto generates a word cloud from that
+            data.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!--/ /-------- Summary Section --------/ /-->
+    <section id="summary">
+      <div class="container">
+        <h2>Summary</h2>
+        <div class="content">
+          <p>
+            From this project I learned how data can have a lot going into it
+            yet produce such a small piece of content for your site. It made me
+            appreciate those inforgraphics that go viral on social media so much
+            more because I now have context for understanding how much data they
+            needed to use and condense.
+          </p>
+
+          <p>
+            In this project im most proud of the charts being automatically
+            updated as the form gets more and more responses. I dont need to do
+            anything for the data to get updated and shown in the graphs so in
+            theory this could continute to "update" even without my action.
+          </p>
+
+          <p>
+            The most challenging thing for this was finding a way to make this
+            kind of site look interesting. I dont think I really got it right
+            but I definitely improved the quality of it through development.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>UX/UI Case Study Media Consumption</p>
+        <p>Sam Louderback</p>
+        <address>
+          &#115;&#106;&#108;&#111;&#117;&#100;&#101;&#114;&#098;&#097;&#099;&#107;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;
+        </address>
+        <p><a href="#top">top</a></p>
+      </div>
+    </footer>
+  </body>
+</html>
