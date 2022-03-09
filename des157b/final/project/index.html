@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Version 3</title>
+    <title>Media Consumption</title>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
       rel="stylesheet"
@@ -10,6 +10,12 @@
     <link href="styles.css" rel="stylesheet" />
     <script src="https://npmcdn.com/parse/dist/parse.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/wordcloud2.js/1.2.2/wordcloud2.min.js"
+      integrity="sha512-lGnVsh3WK0YJ7NX7rQmUu6kqF7vqELuDrUTnxpI2iD86VwI+OlQhi3EAJJZbrBUOfDFOAYAkigxkApHGM2IZTg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="script.js" defer></script>
   </head>
 
@@ -275,6 +281,11 @@
           <canvas id="trust" width="800" height="400"></canvas>
         </div>
         <div class="dataAnalysis">______________________</div>
+      </div>
+      <div class="fullPage page5">
+        <div id="wordCloudHeader">Media thoughts</div>
+        <canvas id="wordCloud" width="800" height="400"></canvas>
+        <div class="dataAnalysis">----------------------</div>
       </div>
     </main>
 
