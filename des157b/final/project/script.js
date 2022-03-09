@@ -357,6 +357,7 @@
     WordCloud(document.getElementById("wordCloud"), {
       list: Array.from(wordMap),
       weightFactor: 50 - totalRows,
+      color: "#325596",
       backgroundColor: "#9fb5d4",
     });
   }
