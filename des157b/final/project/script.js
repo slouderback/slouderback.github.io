@@ -31,8 +31,22 @@
   let televisionTrustValue = 0;
   let webTrustValue = 0;
   let appsTrustValue = 0;
+  let avgTrustValText = document.getElementById("avgTrustVal");
 
   let wordMap = new Map();
+  // All of these should be lowercase
+  let ignoredWords = [
+    "and",
+    "think",
+    "i",
+    "that",
+    "like",
+    "mostly",
+    "of",
+    "things",
+    "for",
+    "example",
+  ];
 
   let snackbar = document.getElementById("snackbar");
 
@@ -189,9 +203,12 @@
 
       if (mediaText) {
         mediaText = mediaText.replaceAll(".", "");
+        mediaText = mediaText.replaceAll(",", "");
         let words = mediaText.split(" ");
         words.forEach((word, i) => {
-          wordMap.set(word, wordMap.get(word) + 1 || 1);
+          if (ignoredWords.indexOf(word.toLowerCase()) < 0) {
+            wordMap.set(word, wordMap.get(word) + 1 || 1);
+          }
         });
       }
     });
@@ -336,7 +353,7 @@
               appsTrustValue,
             ],
             label: "Trust",
-            backgroundColor: "rgba(255, 99, 132, 0.5)",
+            backgroundColor: "rgba(29, 191, 107, 0.5)",
           },
         ],
       },
@@ -359,6 +376,7 @@
       weightFactor: 50 - totalRows,
       color: "#325596",
       backgroundColor: "#9fb5d4",
+      rotateRatio: 0,
     });
   }
 })();
